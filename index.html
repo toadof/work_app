@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="https://th.bing.com/th/id/OIP.PhwTQFtY2R9aXBaB_SXo5wHaHa?w=185&h=185&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkoutLog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg">
+  <span></span><span></span><span></span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">WorkoutLog</div>
+  <div class="nav-links">
+    <button onclick="switchPage('dashPage')"     class="nav-btn active" id="nav-dash">Dashboard</button>
+    <button onclick="switchPage('logPage')"      class="nav-btn" id="nav-log">Log</button>
+    <button onclick="switchPage('libraryPage')"  class="nav-btn" id="nav-library">Exercises</button>
+    <button onclick="switchPage('plansPage')"    class="nav-btn" id="nav-plans">Plans</button>
+    <button onclick="switchPage('progressPage')" class="nav-btn" id="nav-progress">Progress</button>
+  </div>
+</nav>
+
+<!-- ===== DASHBOARD ===== -->
+<div id="dashPage" class="page active">
+  <div class="page-inner">
+    <h1 class="page-title">Dashboard <span id="todayDate"></span></h1>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-num" id="totalExercises">0</div>
+        <div class="stat-label">Exercises Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="totalSets">0</div>
+        <div class="stat-label">Total Sets</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="totalWeight">0 kg</div>
+        <div class="stat-label">Weight Moved</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" id="streak">0 🔥</div>
+        <div class="stat-label">Day Streak</div>
+      </div>
+    </div>
+
+    <div class="section-title">Logged Today</div>
+    <div id="todayList" class="exercise-list">
+      <p class="empty-msg">No exercises logged yet. Go to <b>Log</b> tab!</p>
+    </div>
+
+    <div class="section-title">Muscle Groups Today</div>
+    <div id="muscleBreakdown" class="muscle-row"></div>
+  </div>
+</div>
+
+<!-- ===== LOG ===== -->
+<div id="logPage" class="page">
+  <div class="page-inner">
+    <h1 class="page-title">Log Exercise</h1>
+
+    <div class="log-form glass">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Exercise Name</label>
+          <input type="text" id="exName" placeholder="e.g. Bench Press" list="exSuggestions">
+          <datalist id="exSuggestions"></datalist>
+        </div>
+        <div class="form-group">
+          <label>Muscle Group</label>
+          <select id="exMuscle">
+            <option value="Chest">Chest</option>
+            <option value="Back">Back</option>
+            <option value="Legs">Legs</option>
+            <option value="Shoulders">Shoulders</option>
+            <option value="Arms">Arms</option>
+            <option value="Core">Core</option>
+            <option value="Cardio">Cardio</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Sets</label>
+          <input type="number" id="exSets" placeholder="4" min="1">
+        </div>
+        <div class="form-group">
+          <label>Reps</label>
+          <input type="number" id="exReps" placeholder="10" min="1">
+        </div>
+        <div class="form-group">
+          <label>Weight (kg)</label>
+          <input type="number" id="exWeight" placeholder="60" min="0">
+        </div>
+      </div>
+      <button onclick="logExercise()">+ Log Exercise</button>
+    </div>
+
+    <div class="section-title">Exercise History</div>
+    <div id="historyList" class="exercise-list"></div>
+  </div>
+</div>
+
+<!-- ===== EXERCISE LIBRARY ===== -->
+<div id="libraryPage" class="page">
+  <div class="page-inner">
+    <h1 class="page-title">Exercise Library <span>30 exercises · all muscle groups</span></h1>
+
+    <div class="lib-search-bar">
+      <input type="text" id="libSearch" placeholder="Search exercises..." oninput="renderLibrary()">
+      <select id="libFilter" onchange="renderLibrary()">
+        <option value="">All Muscles</option>
+        <option value="Chest">Chest</option>
+        <option value="Back">Back</option>
+        <option value="Legs">Legs</option>
+        <option value="Shoulders">Shoulders</option>
+        <option value="Arms">Arms</option>
+        <option value="Core">Core</option>
+        <option value="Cardio">Cardio</option>
+      </select>
+    </div>
+
+    <div class="lib-grid" id="libGrid"></div>
+  </div>
+</div>
+
+<!-- ===== PLANS ===== -->
+<div id="plansPage" class="page">
+  <div class="page-inner">
+    <h1 class="page-title">Workout Plans</h1>
+
+    <button class="btn-yellow" onclick="openCreatePlan()">+ Create New Plan</button>
+
+    <div class="section-title">My Plans</div>
+    <div class="plans-grid" id="plansGrid">
+      <p class="empty-msg">No plans yet. Create one above!</p>
+    </div>
+
+    <!-- Plan detail view -->
+    <div id="planDetail" style="display:none;">
+      <div class="section-title" id="planDetailTitle"></div>
+      <div class="exercise-list" id="planDetailList"></div>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button onclick="startPlanWorkout()" class="btn-yellow">▶ Start This Workout</button>
+        <button onclick="document.getElementById('planDetail').style.display='none'; document.getElementById('plansGrid').style.display='grid';" style="background:rgba(255,255,255,0.07);color:var(--text);">← Back to Plans</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROGRESS ===== -->
+<div id="progressPage" class="page">
+  <div class="page-inner">
+    <h1 class="page-title">Progress</h1>
+
+    <div class="glass filter-bar">
+      <label>Track exercise:</label>
+      <select id="progressFilter" onchange="renderProgress()">
+        <option value="">-- Select Exercise --</option>
+      </select>
+    </div>
+
+    <div class="section-title">Weight Progression</div>
+    <div id="weightChart" class="chart-area">
+      <p class="empty-msg">Log an exercise to see progress.</p>
+    </div>
+
+    <div class="section-title">Personal Bests</div>
+    <div id="pbList" class="pb-grid"></div>
+
+    <div class="section-title">Total Volume by Muscle</div>
+    <div id="volumeChart" class="volume-bars"><p class="empty-msg">No data yet.</p></div>
+  </div>
+</div>
+
+<!-- CREATE PLAN MODAL -->
+<div class="modal-overlay" id="planModal" style="display:none;">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('planModal').style.display='none'">✕</button>
+    <h2>Create Plan</h2>
+    <div class="form-group" style="margin-bottom:14px;">
+      <label>Plan Name</label>
+      <input type="text" id="planNameInput" placeholder="e.g. Push Day, Full Body A">
+    </div>
+    <div class="section-title" style="margin-top:0;">Select Exercises</div>
+    <div class="plan-ex-checklist" id="planExChecklist"></div>
+    <div style="margin-top:18px;display:flex;gap:10px;">
+      <button class="btn-yellow" onclick="savePlan()">Save Plan</button>
+      <button onclick="document.getElementById('planModal').style.display='none'" style="background:rgba(255,255,255,0.07);color:var(--text);">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
