@@ -1,42 +1,42 @@
 // =================== DATA ===================
 const EXERCISES = [
   // CHEST
-  { name:"Bench Press",          muscle:"Chest",     icon:"🏋️", desc:"Flat barbell press for overall chest mass",             yt:"https://www.youtube.com/results?search_query=bench+press+form+tutorial" },
-  { name:"Incline Dumbbell Press",muscle:"Chest",    icon:"💪", desc:"Upper chest focus with dumbbells on incline bench",    yt:"https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial" },
-  { name:"Push Ups",             muscle:"Chest",     icon:"🔥", desc:"Bodyweight classic — chest, triceps, shoulders",       yt:"https://www.youtube.com/results?search_query=push+ups+proper+form" },
-  { name:"Cable Flyes",          muscle:"Chest",     icon:"🔄", desc:"Cable crossover for chest peak contraction",           yt:"https://www.youtube.com/results?search_query=cable+flyes+tutorial" },
+  { name:"Bench Press",          muscle:"Chest",     icon:"", desc:"Flat barbell press for overall chest mass",             yt:"https://www.youtube.com/results?search_query=bench+press+form+tutorial" },
+  { name:"Incline Dumbbell Press",muscle:"Chest",    icon:"", desc:"Upper chest focus with dumbbells on incline bench",    yt:"https://www.youtube.com/results?search_query=incline+dumbbell+press+tutorial" },
+  { name:"Push Ups",             muscle:"Chest",     icon:"", desc:"Bodyweight classic — chest, triceps, shoulders",       yt:"https://www.youtube.com/results?search_query=push+ups+proper+form" },
+  { name:"Cable Flyes",          muscle:"Chest",     icon:"", desc:"Cable crossover for chest peak contraction",           yt:"https://www.youtube.com/results?search_query=cable+flyes+tutorial" },
   // BACK
-  { name:"Deadlift",             muscle:"Back",      icon:"⚡", desc:"King of all lifts — full posterior chain",             yt:"https://www.youtube.com/results?search_query=deadlift+form+tutorial" },
-  { name:"Pull Ups",             muscle:"Back",      icon:"🧲", desc:"Bodyweight lat builder — wide grip for V-taper",       yt:"https://www.youtube.com/results?search_query=pull+ups+proper+form" },
-  { name:"Barbell Row",          muscle:"Back",      icon:"🏋️", desc:"Bent-over row for thick mid-back",                    yt:"https://www.youtube.com/results?search_query=barbell+row+form" },
-  { name:"Lat Pulldown",         muscle:"Back",      icon:"⬇️", desc:"Cable machine lat isolation movement",                yt:"https://www.youtube.com/results?search_query=lat+pulldown+tutorial" },
-  { name:"Seated Cable Row",     muscle:"Back",      icon:"🔗", desc:"Mid-back and rhomboid builder on cable machine",       yt:"https://www.youtube.com/results?search_query=seated+cable+row+tutorial" },
+  { name:"Deadlift",             muscle:"Back",      icon:"", desc:"King of all lifts — full posterior chain",             yt:"https://www.youtube.com/results?search_query=deadlift+form+tutorial" },
+  { name:"Pull Ups",             muscle:"Back",      icon:"", desc:"Bodyweight lat builder — wide grip for V-taper",       yt:"https://www.youtube.com/results?search_query=pull+ups+proper+form" },
+  { name:"Barbell Row",          muscle:"Back",      icon:"", desc:"Bent-over row for thick mid-back",                    yt:"https://www.youtube.com/results?search_query=barbell+row+form" },
+  { name:"Lat Pulldown",         muscle:"Back",      icon:"", desc:"Cable machine lat isolation movement",                yt:"https://www.youtube.com/results?search_query=lat+pulldown+tutorial" },
+  { name:"Seated Cable Row",     muscle:"Back",      icon:"", desc:"Mid-back and rhomboid builder on cable machine",       yt:"https://www.youtube.com/results?search_query=seated+cable+row+tutorial" },
   // LEGS
-  { name:"Squat",                muscle:"Legs",      icon:"🦵", desc:"Barbell back squat — the king of leg exercises",      yt:"https://www.youtube.com/results?search_query=squat+form+tutorial" },
-  { name:"Romanian Deadlift",    muscle:"Legs",      icon:"🍑", desc:"Hip hinge for glutes and hamstrings",                 yt:"https://www.youtube.com/results?search_query=romanian+deadlift+tutorial" },
-  { name:"Leg Press",            muscle:"Legs",      icon:"🚀", desc:"Machine quad and glute compound movement",            yt:"https://www.youtube.com/results?search_query=leg+press+tutorial" },
-  { name:"Walking Lunges",       muscle:"Legs",      icon:"🚶", desc:"Unilateral leg builder for balance and quads",        yt:"https://www.youtube.com/results?search_query=walking+lunges+form" },
-  { name:"Calf Raises",          muscle:"Legs",      icon:"👟", desc:"Standing or seated calf isolation",                   yt:"https://www.youtube.com/results?search_query=calf+raises+tutorial" },
+  { name:"Squat",                muscle:"Legs",      icon:"", desc:"Barbell back squat — the king of leg exercises",      yt:"https://www.youtube.com/results?search_query=squat+form+tutorial" },
+  { name:"Romanian Deadlift",    muscle:"Legs",      icon:"", desc:"Hip hinge for glutes and hamstrings",                 yt:"https://www.youtube.com/results?search_query=romanian+deadlift+tutorial" },
+  { name:"Leg Press",            muscle:"Legs",      icon:"", desc:"Machine quad and glute compound movement",            yt:"https://www.youtube.com/results?search_query=leg+press+tutorial" },
+  { name:"Walking Lunges",       muscle:"Legs",      icon:"", desc:"Unilateral leg builder for balance and quads",        yt:"https://www.youtube.com/results?search_query=walking+lunges+form" },
+  { name:"Calf Raises",          muscle:"Legs",      icon:"", desc:"Standing or seated calf isolation",                   yt:"https://www.youtube.com/results?search_query=calf+raises+tutorial" },
   // SHOULDERS
-  { name:"Overhead Press",       muscle:"Shoulders", icon:"☝️", desc:"Barbell or dumbbell press for all three deltoid heads",yt:"https://www.youtube.com/results?search_query=overhead+press+form" },
-  { name:"Lateral Raises",       muscle:"Shoulders", icon:"🦅", desc:"Dumbbell side raises for wide-shoulder look",         yt:"https://www.youtube.com/results?search_query=lateral+raises+tutorial" },
-  { name:"Front Raises",         muscle:"Shoulders", icon:"⬆️", desc:"Anterior deltoid isolation movement",                yt:"https://www.youtube.com/results?search_query=front+raises+tutorial" },
-  { name:"Face Pulls",           muscle:"Shoulders", icon:"😤", desc:"Cable rear delt and rotator cuff health exercise",    yt:"https://www.youtube.com/results?search_query=face+pulls+tutorial" },
+  { name:"Overhead Press",       muscle:"Shoulders", icon:"", desc:"Barbell or dumbbell press for all three deltoid heads",yt:"https://www.youtube.com/results?search_query=overhead+press+form" },
+  { name:"Lateral Raises",       muscle:"Shoulders", icon:"", desc:"Dumbbell side raises for wide-shoulder look",         yt:"https://www.youtube.com/results?search_query=lateral+raises+tutorial" },
+  { name:"Front Raises",         muscle:"Shoulders", icon:"", desc:"Anterior deltoid isolation movement",                yt:"https://www.youtube.com/results?search_query=front+raises+tutorial" },
+  { name:"Face Pulls",           muscle:"Shoulders", icon:"", desc:"Cable rear delt and rotator cuff health exercise",    yt:"https://www.youtube.com/results?search_query=face+pulls+tutorial" },
   // ARMS
-  { name:"Barbell Curl",         muscle:"Arms",      icon:"💥", desc:"Classic bicep mass builder with barbell",             yt:"https://www.youtube.com/results?search_query=barbell+curl+form" },
-  { name:"Hammer Curl",          muscle:"Arms",      icon:"🔨", desc:"Neutral grip curl for brachialis and bicep",          yt:"https://www.youtube.com/results?search_query=hammer+curl+tutorial" },
-  { name:"Tricep Dips",          muscle:"Arms",      icon:"🏊", desc:"Bodyweight or weighted dips for tricep mass",         yt:"https://www.youtube.com/results?search_query=tricep+dips+form" },
-  { name:"Skull Crushers",       muscle:"Arms",      icon:"💀", desc:"EZ-bar or dumbbell tricep extension lying down",      yt:"https://www.youtube.com/results?search_query=skull+crushers+tutorial" },
-  { name:"Cable Tricep Pushdown",muscle:"Arms",      icon:"📉", desc:"Rope or bar pushdown for tricep isolation",           yt:"https://www.youtube.com/results?search_query=tricep+pushdown+tutorial" },
+  { name:"Barbell Curl",         muscle:"Arms",      icon:"", desc:"Classic bicep mass builder with barbell",             yt:"https://www.youtube.com/results?search_query=barbell+curl+form" },
+  { name:"Hammer Curl",          muscle:"Arms",      icon:"", desc:"Neutral grip curl for brachialis and bicep",          yt:"https://www.youtube.com/results?search_query=hammer+curl+tutorial" },
+  { name:"Tricep Dips",          muscle:"Arms",      icon:"", desc:"Bodyweight or weighted dips for tricep mass",         yt:"https://www.youtube.com/results?search_query=tricep+dips+form" },
+  { name:"Skull Crushers",       muscle:"Arms",      icon:"", desc:"EZ-bar or dumbbell tricep extension lying down",      yt:"https://www.youtube.com/results?search_query=skull+crushers+tutorial" },
+  { name:"Cable Tricep Pushdown",muscle:"Arms",      icon:"", desc:"Rope or bar pushdown for tricep isolation",           yt:"https://www.youtube.com/results?search_query=tricep+pushdown+tutorial" },
   // CORE
-  { name:"Plank",                muscle:"Core",      icon:"🧱", desc:"Full core stability — hold for time",                 yt:"https://www.youtube.com/results?search_query=plank+form+tutorial" },
-  { name:"Hanging Leg Raises",   muscle:"Core",      icon:"🦶", desc:"Bar hang for lower abs and hip flexors",              yt:"https://www.youtube.com/results?search_query=hanging+leg+raises+tutorial" },
-  { name:"Cable Crunch",         muscle:"Core",      icon:"⚙️", desc:"Weighted crunch for upper abs via cable",             yt:"https://www.youtube.com/results?search_query=cable+crunch+tutorial" },
-  { name:"Ab Wheel Rollout",     muscle:"Core",      icon:"🎡", desc:"Full core strength and anti-extension challenge",     yt:"https://www.youtube.com/results?search_query=ab+wheel+rollout+tutorial" },
+  { name:"Plank",                muscle:"Core",      icon:"", desc:"Full core stability — hold for time",                 yt:"https://www.youtube.com/results?search_query=plank+form+tutorial" },
+  { name:"Hanging Leg Raises",   muscle:"Core",      icon:"", desc:"Bar hang for lower abs and hip flexors",              yt:"https://www.youtube.com/results?search_query=hanging+leg+raises+tutorial" },
+  { name:"Cable Crunch",         muscle:"Core",      icon:"", desc:"Weighted crunch for upper abs via cable",             yt:"https://www.youtube.com/results?search_query=cable+crunch+tutorial" },
+  { name:"Ab Wheel Rollout",     muscle:"Core",      icon:"", desc:"Full core strength and anti-extension challenge",     yt:"https://www.youtube.com/results?search_query=ab+wheel+rollout+tutorial" },
   // CARDIO
-  { name:"Treadmill Run",        muscle:"Cardio",    icon:"🏃", desc:"Steady state or interval cardio",                    yt:"https://www.youtube.com/results?search_query=treadmill+running+tips" },
-  { name:"Jump Rope",            muscle:"Cardio",    icon:"🪢", desc:"High intensity full-body cardio",                    yt:"https://www.youtube.com/results?search_query=jump+rope+workout" },
-  { name:"Burpees",              muscle:"Cardio",    icon:"💨", desc:"Full body explosive movement and conditioning",       yt:"https://www.youtube.com/results?search_query=burpees+tutorial" },
+  { name:"Treadmill Run",        muscle:"Cardio",    icon:"", desc:"Steady state or interval cardio",                    yt:"https://www.youtube.com/results?search_query=treadmill+running+tips" },
+  { name:"Jump Rope",            muscle:"Cardio",    icon:"", desc:"High intensity full-body cardio",                    yt:"https://www.youtube.com/results?search_query=jump+rope+workout" },
+  { name:"Burpees",              muscle:"Cardio",    icon:"", desc:"Full body explosive movement and conditioning",       yt:"https://www.youtube.com/results?search_query=burpees+tutorial" },
 ];
 
 const MUSCLE_COLORS = {
@@ -51,31 +51,31 @@ function savePlans(p){ localStorage.setItem("workoutPlans", JSON.stringify(p)); 
 function getToday() { return new Date().toISOString().split("T")[0]; }
 
 // =================== SEED DEFAULT PLAN ===================
-function seedDefaultPlan() {
-  let plans = getPlans();
-  const defaultName = "Full Body Starter";
-  if (plans.find(p => p.name === defaultName)) return; // already seeded
+// function seedDefaultPlan() {
+//   let plans = getPlans();
+//   const defaultName = "Full Body Starter";
+//   if (plans.find(p => p.name === defaultName)) return; // already seeded
 
-  const defaultExercises = [
-    "Bench Press",
-    "Squat",
-    "Deadlift",
-    "Overhead Press",
-    "Barbell Row",
-    "Barbell Curl",
-    "Tricep Dips",
-    "Plank"
-  ];
+//   const defaultExercises = [
+//     "Bench Press",
+//     "Squat",
+//     "Deadlift",
+//     "Overhead Press",
+//     "Barbell Row",
+//     "Barbell Curl",
+//     "Tricep Dips",
+//     "Plank"
+//   ];
 
-  const plan = {
-    id: Date.now(),
-    name: defaultName,
-    exercises: defaultExercises
-  };
+//   const plan = {
+//     id: Date.now(),
+//     name: defaultName,
+//     exercises: defaultExercises
+//   };
 
-  plans.push(plan);
-  savePlans(plans);
-}
+//   plans.push(plan);
+//   savePlans(plans);
+// }
 
 // =================== NAV ===================
 function switchPage(id) {
@@ -91,7 +91,7 @@ function switchPage(id) {
   if(id==="logPage")      renderHistory();
   if(id==="progressPage") renderProgress();
   if(id==="libraryPage")  renderLibrary();
-  if(id==="plansPage")    renderPlans();
+  // if(id==="plansPage")    renderPlans();
 }
 
 // =================== LOG ===================
@@ -227,107 +227,107 @@ function quickAddToLog(name, muscle) {
 }
 
 // =================== PLANS ===================
-let activePlanId = null;
+// let activePlanId = null;
 
-function renderPlans() {
-  let plans = getPlans();
-  let grid  = document.getElementById("plansGrid");
-  document.getElementById("planDetail").style.display = "none";
-  grid.style.display = "";
+// function renderPlans() {
+//   let plans = getPlans();
+//   let grid  = document.getElementById("plansGrid");
+//   document.getElementById("planDetail").style.display = "none";
+//   grid.style.display = "";
 
-  if (!plans.length) {
-    grid.innerHTML = '<p class="empty-msg">No plans yet. Create one above!</p>';
-    return;
-  }
+//   if (!plans.length) {
+//     grid.innerHTML = '<p class="empty-msg">No plans yet. Create one above!</p>';
+//     return;
+//   }
 
-  grid.innerHTML = plans.map(p => {
-    let exTags = p.exercises.map(n => `<span class="plan-ex-tag">${n}</span>`).join("");
-    return `
-      <div class="plan-card" onclick="viewPlan(${p.id})">
-        <div class="plan-card-header">
-          <div>
-            <div class="plan-name">${p.name}</div>
-            <div class="plan-count">${p.exercises.length} exercises</div>
-          </div>
-          <div class="plan-actions" onclick="event.stopPropagation()">
-            <button class="plan-del-btn" onclick="deletePlan(${p.id})">🗑</button>
-          </div>
-        </div>
-        <div class="plan-card-body">${exTags || '<span style="color:var(--muted);font-size:12px;">No exercises added</span>'}</div>
-      </div>`;
-  }).join("");
-}
+//   grid.innerHTML = plans.map(p => {
+//     let exTags = p.exercises.map(n => `<span class="plan-ex-tag">${n}</span>`).join("");
+//     return `
+//       <div class="plan-card" onclick="viewPlan(${p.id})">
+//         <div class="plan-card-header">
+//           <div>
+//             <div class="plan-name">${p.name}</div>
+//             <div class="plan-count">${p.exercises.length} exercises</div>
+//           </div>
+//           <div class="plan-actions" onclick="event.stopPropagation()">
+//             <button class="plan-del-btn" onclick="deletePlan(${p.id})">🗑</button>
+//           </div>
+//         </div>
+//         <div class="plan-card-body">${exTags || '<span style="color:var(--muted);font-size:12px;">No exercises added</span>'}</div>
+//       </div>`;
+//   }).join("");
+// }
 
-function viewPlan(id) {
-  let plans = getPlans();
-  let plan  = plans.find(p => p.id === id);
-  if (!plan) return;
-  activePlanId = id;
-  document.getElementById("plansGrid").style.display = "none";
-  let detail = document.getElementById("planDetail");
-  detail.style.display = "block";
-  document.getElementById("planDetailTitle").textContent = plan.name;
-  let list = document.getElementById("planDetailList");
-  if (!plan.exercises.length) { list.innerHTML='<p class="empty-msg">No exercises in this plan.</p>'; return; }
-  list.innerHTML = plan.exercises.map(eName => {
-    let ex = EXERCISES.find(e => e.name === eName) || { icon:"💪", desc:"", muscle:"", yt:"" };
-    return `
-      <div class="ex-item">
-        <div class="lib-item-left">
-          <div class="lib-item-icon">${ex.icon||"💪"}</div>
-          <div>
-            <div class="ex-name">${eName}</div>
-            <div class="ex-details">${ex.desc||""}</div>
-          </div>
-        </div>
-        <div class="ex-right">
-          <span class="muscle-tag ${(ex.muscle||"").toLowerCase()}">${ex.muscle||""}</span>
-          ${ex.yt ? `<a href="${ex.yt}" target="_blank" class="yt-btn">▶ YouTube</a>` : ""}
-        </div>
-      </div>`;
-  }).join("");
-}
+// function viewPlan(id) {
+//   let plans = getPlans();
+//   let plan  = plans.find(p => p.id === id);
+//   if (!plan) return;
+//   activePlanId = id;
+//   document.getElementById("plansGrid").style.display = "none";
+//   let detail = document.getElementById("planDetail");
+//   detail.style.display = "block";
+//   document.getElementById("planDetailTitle").textContent = plan.name;
+//   let list = document.getElementById("planDetailList");
+//   if (!plan.exercises.length) { list.innerHTML='<p class="empty-msg">No exercises in this plan.</p>'; return; }
+//   list.innerHTML = plan.exercises.map(eName => {
+//     let ex = EXERCISES.find(e => e.name === eName) || { icon:"💪", desc:"", muscle:"", yt:"" };
+//     return `
+//       <div class="ex-item">
+//         <div class="lib-item-left">
+//           <div class="lib-item-icon">${ex.icon||"💪"}</div>
+//           <div>
+//             <div class="ex-name">${eName}</div>
+//             <div class="ex-details">${ex.desc||""}</div>
+//           </div>
+//         </div>
+//         <div class="ex-right">
+//           <span class="muscle-tag ${(ex.muscle||"").toLowerCase()}">${ex.muscle||""}</span>
+//           ${ex.yt ? `<a href="${ex.yt}" target="_blank" class="yt-btn">▶ YouTube</a>` : ""}
+//         </div>
+//       </div>`;
+//   }).join("");
+// }
 
-function startPlanWorkout() {
-  let plans = getPlans();
-  let plan  = plans.find(p => p.id === activePlanId);
-  if (!plan || !plan.exercises.length) return;
-  let first = EXERCISES.find(e => e.name === plan.exercises[0]);
-  document.getElementById("exName").value   = plan.exercises[0];
-  document.getElementById("exMuscle").value = first ? first.muscle : "Chest";
-  switchPage("logPage");
-  showToast("Started: " + plan.name);
-}
+// function startPlanWorkout() {
+//   let plans = getPlans();
+//   let plan  = plans.find(p => p.id === activePlanId);
+//   if (!plan || !plan.exercises.length) return;
+//   let first = EXERCISES.find(e => e.name === plan.exercises[0]);
+//   document.getElementById("exName").value   = plan.exercises[0];
+//   document.getElementById("exMuscle").value = first ? first.muscle : "Chest";
+//   switchPage("logPage");
+//   showToast("Started: " + plan.name);
+// }
 
-function deletePlan(id) {
-  if (!confirm("Delete this plan?")) return;
-  savePlans(getPlans().filter(p => p.id !== id));
-  renderPlans();
-}
+// function deletePlan(id) {
+//   if (!confirm("Delete this plan?")) return;
+//   savePlans(getPlans().filter(p => p.id !== id));
+//   renderPlans();
+// }
 
-function openCreatePlan() {
-  let checklist = document.getElementById("planExChecklist");
-  checklist.innerHTML = EXERCISES.map(e => `
-    <div class="plan-ex-check-item">
-      <input type="checkbox" id="pex-${e.name.replace(/\s/g,'_')}" value="${e.name}">
-      <label for="pex-${e.name.replace(/\s/g,'_')}">
-        ${e.icon} ${e.name} <span class="muscle-tag ${e.muscle.toLowerCase()}" style="margin-left:6px;">${e.muscle}</span>
-      </label>
-    </div>`).join("");
-  document.getElementById("planNameInput").value = "";
-  document.getElementById("planModal").style.display = "flex";
-}
+// function openCreatePlan() {
+//   let checklist = document.getElementById("planExChecklist");
+//   checklist.innerHTML = EXERCISES.map(e => `
+//     <div class="plan-ex-check-item">
+//       <input type="checkbox" id="pex-${e.name.replace(/\s/g,'_')}" value="${e.name}">
+//       <label for="pex-${e.name.replace(/\s/g,'_')}">
+//         ${e.icon} ${e.name} <span class="muscle-tag ${e.muscle.toLowerCase()}" style="margin-left:6px;">${e.muscle}</span>
+//       </label>
+//     </div>`).join("");
+//   document.getElementById("planNameInput").value = "";
+//   document.getElementById("planModal").style.display = "flex";
+// }
 
-function savePlan() {
-  let name = document.getElementById("planNameInput").value.trim();
-  if (!name) { alert("Enter a plan name!"); return; }
-  let checked = [...document.querySelectorAll("#planExChecklist input:checked")].map(i => i.value);
-  let plan = { id: Date.now(), name, exercises: checked };
-  let plans = getPlans(); plans.push(plan); savePlans(plans);
-  document.getElementById("planModal").style.display = "none";
-  switchPage("plansPage");
-  showToast("Plan saved: " + name);
-}
+// function savePlan() {
+//   let name = document.getElementById("planNameInput").value.trim();
+//   if (!name) { alert("Enter a plan name!"); return; }
+//   let checked = [...document.querySelectorAll("#planExChecklist input:checked")].map(i => i.value);
+//   let plan = { id: Date.now(), name, exercises: checked };
+//   let plans = getPlans(); plans.push(plan); savePlans(plans);
+//   document.getElementById("planModal").style.display = "none";
+//   switchPage("plansPage");
+//   showToast("Plan saved: " + name);
+// }
 
 // =================== PROGRESS ===================
 function renderProgress() {
